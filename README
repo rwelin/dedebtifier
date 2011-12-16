@@ -3,6 +3,8 @@ Author: Robert Welin <robert dot welin at gmail dot com>
 Last Change: Fri December 16 2011
 
 == COMPILING
+1. Enter the project directory
+2. Create a folder named bin/
 1. Run make in the project directory
 
 == INSTALLATION
