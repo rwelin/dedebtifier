@@ -1,0 +1,48 @@
+= README FOR DEEBITIFIER =
+Author: Robert Welin <robert dot welin at gmail dot com>
+Last Change: Fri December 16 2011
+
+== COMPILING
+1. Run make in the project directory
+
+== INSTALLATION
+1. Copy the executable dedebtifier located in bin/ to your path
+
+== USAGE 
+
+   accumulate debts in file -  dedebtifier -f FILE -p PAYER -n NAME -n ... -a AMOUNTS
+   pretty print debts       -  dedebtifier -f FILE
+   print help message       -  dedebtifier -h
+
+AMOUNTS has the following format: £A£B... where A is the amount 
+that the first person specified with the -n flag owes the payer 
+for the payment you are adding. B is the mount that the second 
+person after a -n flag owes the payer and so on.
+
+=== EXAMPLE:
+Robert payed for the groceries for David, Jake, Sam and
+himself. The total amount of the shopping was £40. David's 
+part was £12, Jake's was £15, Sam's was £5 and Robert's 
+was £8. They had stored their previous debts in a file 
+called "debt_accumulation". Therefore they would call 
+dedebtifier like this: 
+
+dedebtifier -f debt_accumulation -p Robert -n David -n Jake -n Robert -n Sam -a £12£15£8£5
+
+Then by using 'dedebtifier -f debt_accumulation' they would get the following output:
+
+David owes Robert £12.00     
+Jake owes Robert £15.00     
+Sam owes Robert £5.00  
+
+If then David payed Robert back 7 of the £12 he owes him they would run the program like this:
+
+dedebtifier -f debt_accumulation -p David -n David -n Jake -n Robert -n Sam -a £0£0£7£0
+
+=== HELPER SCRIPT
+In the helper_script folder there is a bash script for making the usage of
+dedebtifier less awkward. 
+
+== BUGS
+Please report any bugs to Robert Welin <robert dot welin at gmail dot
+com>
