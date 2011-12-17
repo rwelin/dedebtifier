@@ -1,6 +1,16 @@
 = README FOR DEEBITIFIER =
-Author: Robert Welin <robert dot welin at gmail dot com>
-Last Change: Fri December 16 2011
+
+== DESCRIPTION
+Have you ever had the problem that you and your friends have lots of
+debts between each other and lots of transactions need to be done for the
+debts to be repaid? Dedebtifier tries to solve this problem by simplifying
+the debts so that as few transactions as possible have to be done to settle
+the debts.
+
+At the moment it is a command line program with limited user interface,
+but will be expanded in order to increase usability. It has also not been
+tested for more than four people. Consequently the program might not
+perform optimal simplification in the general case.
 
 == COMPILING
 1. Enter the project directory
